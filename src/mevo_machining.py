@@ -653,9 +653,9 @@ def acquisition(x1, x2, x3):
 
 def opt_acquisition_3d(X, model):
     """
-    Optimize the acquisition function using Micro Evolutionary PSO.
+    Optimize the acquisition function using MEPSO.
     
-    Uses the MicroEPSO algorithm to search for the point most likely to
+    Uses the MEPSO algorithm to search for the point most likely to
     improve the objective function based on the surrogate model. This
     balances exploration and exploitation in the decision space.
     
@@ -670,12 +670,12 @@ def opt_acquisition_3d(X, model):
     Returns
     -------
     array
-        Best point found by the PSO optimizer [x1, x2, x3]
+        Best point found by the optimizer [x1, x2, x3]
     
     Notes
     -----
     Uses global lower_bound and upper_bound for search space constraints.
-    MicroEPSO hyperparameters:
+    Hyperparameters:
     - iterations: Inner loop iterations (higher = more local refinement)
     - max_epochs: Outer loop epochs (higher = more outer iterations)
     - beta: Probability of following global best (0.9 = mostly global)
@@ -961,6 +961,7 @@ for run_num in range(number_of_runs):
             son = np.clip(son, lower_bound, upper_bound)
 
             # Check for duplicate crossover offspring
+            son_copy = np.round(son, 12)
             Xsamples_list = np.round(Xsamples, 12).tolist()
 
             if son_copy.tolist() in Xsamples_list:
@@ -997,6 +998,7 @@ for run_num in range(number_of_runs):
             mutated_X = np.clip(mutated_X, lower_bound, upper_bound)
 
             # Check for duplicate mutated point
+            mutated_copy = np.round(mutated_X, 12)
             Xsamples_list = np.round(Xsamples, 12).tolist()
 
             if mutated_copy.tolist() in Xsamples_list:
