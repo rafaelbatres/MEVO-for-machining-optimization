@@ -1,4 +1,4 @@
-# MEVO: Meta-Evolutionary Optimizer with Surrogate-Based Optimization
+# MEVO: Meta-Evolutionary Optimizer with Surrogate-Based Optimization for machining optimization
 
 ## Overview
 
