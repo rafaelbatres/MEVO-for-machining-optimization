@@ -57,7 +57,6 @@ This formulation enables the simultaneous consideration of sustainability and pr
 ├── data/               # Experimental datasets
 ├── src/                # Source code for MEVO and MEPSO
 ├── results/            # Optimization results and analysis
-├── notebooks/          # Jupyter notebooks for experimentation
 └── README.md
 ```
 
