@@ -70,7 +70,7 @@ If you use this repository in your research, please cite:
 @article{MEVO_Machining,
   title={Experimental Assessment of the Metamodel-Based Evolutionary Optimizer (MEVO) for Machining Optimization},
   author={Velázquez-López, Antonio and Batres, Rafael and Miranda-Valenzuela, José Carlos and Calderón-Nájera, Juan de Dios},
-journal = {International Journal of Advanced Manufacturing Technology},
+  journal = {International Journal of Advanced Manufacturing Technology},
   year={2026}
 }
 ```
